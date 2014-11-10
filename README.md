@@ -1,3 +1,9 @@
+Base presentation for Container Solutions
+=========================================
+
+Goal is to be easy to use as a template for Container Solutions presentations using RevealJS.
+
+
 RevealJS-Docker
 ===============
 
