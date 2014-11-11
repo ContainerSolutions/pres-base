@@ -21,22 +21,23 @@
 			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
 		</script>
 
+        <!-- Live reload -->
+        <script src="//localhost:35729/livereload.js"></script>
+
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
 	</head>
-
 	<body>
-
 		<div class="reveal">
 			<div class="slides">
-			<section data-markdown="md/slides.md"
-			         data-separator="^---\n"
-			         data-vertical="^-"
-			         data-notes="^Note:"
-			         data-charset="utf-8"
-                     data-background="#ffffff">
-			</section>
+                <section data-markdown="md/slides.md"
+                         data-separator="^---\n"
+                         data-vertical="^-"
+                         data-notes="^Note:"
+                         data-charset="utf-8"
+                         data-background="#ffffff">
+                </section>
 			</div>
             <footer>
                 <img src="container-solutions-logo.png" alt="Container Solutions" />
@@ -47,12 +48,10 @@
             </footer>
 		</div>
 
-
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
 
 		<script>
-
 			// Full list of configuration options available here:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({

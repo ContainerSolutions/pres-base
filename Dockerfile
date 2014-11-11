@@ -2,13 +2,17 @@ FROM node
 
 MAINTAINER Adrian Mouat <adrian@adrianmouat.com>
 
-RUN git clone https://github.com/hakimel/reveal.js.git /revealjs
+RUN git clone https://github.com/ContainerSolutions/reveal.js.git /revealjs
 RUN mkdir -p /revealjs/md
 
 WORKDIR /revealjs
 
 RUN npm install -g grunt-cli && npm install
-RUN sed -i Gruntfile.js -e 's/port: port,/port: port, hostname: "",/'
+
+RUN apt-get -y install vim
+
+RUN sed -i Gruntfile.js -e 's/port: port,/port: port, hostname: "", livereload: true,/'
+RUN sed -i Gruntfile.js -e "s/files: \[ 'index\.html' \],/files: [ 'md\/**' ],/"
 ADD index.html /revealjs/
 ADD custom.css /revealjs/css/
 ADD container-solutions-logo.png /revealjs/container-solutions-logo.png
