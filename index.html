@@ -42,14 +42,16 @@
             <footer>
                 <img src="container-solutions-logo.png" alt="Container Solutions" />
                 <p>
-                    Author's name<br />
-                    <a href="https://twitter.com/containersoluti">@containersoluti</a>
+                    <span class="author"></span><br />
+                    <a class="twitter" href="#"></a>
                 </p>
             </footer>
 		</div>
 
+		<script src="pres/config.js"></script>
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
+        <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
 
 		<script>
 			// Full list of configuration options available here:
@@ -78,6 +80,12 @@
 					{ src: 'plugin/title.js', async: true }
 				]
 			});
+
+            $(document).ready(function() {
+                $('.author').text(config.author);
+                $('.twitter').attr('href','https://twitter.com/' + config.twitter);
+                $('.twitter').text('@' + config.twitter);
+            });
 
 		</script>
 
