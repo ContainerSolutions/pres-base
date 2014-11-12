@@ -9,6 +9,10 @@ html body {
   background-color: #466BB0; 
 }
 
+.reveal .slides {
+    margin-top: -60px;
+}
+
 .reveal section pre {
     background-color: #3F3F3F !important;
     padding: 5px !important;
@@ -22,6 +26,7 @@ html body {
 }
 
 .reveal footer {
+    background: rgba(255,255,255,.9);
     bottom: 0px;
     border-top: #1d9ceb solid 1px;
     padding-top: 10px;
