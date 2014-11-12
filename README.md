@@ -27,7 +27,15 @@ If you need to include other files e.g. images, keep them with the presentation 
 
     docker run -d -p 8000:8000 -p 35729:35729 -v /my/slide/dir:/revealjs/pres amouat/revealjs:latest
 
-This project is *heavily* based on [Peter Parente's revealjs](https://github.com/parente/dockerfiles/tree/master/revealjs). This differences are that this version has an updated Dockerfile which uses the NodeJS official image and removes a problematic VOLUME command. 
+This project is *heavily* based on [Peter Parente's revealjs](https://github.com/parente/dockerfiles/tree/master/revealjs). This differences are that this version has an updated Dockerfile which uses the NodeJS official image and removes a problematic VOLUME command.
+ 
+To display presentation author and/or their Twitter account next to the logo in the footer, add config.js in the following format to the presentation volume:
+
+    var config = {
+        author: "Container Solutions",
+        twitter: "containersoluti"
+    };
+    
 
 ## Stable Version
 
