@@ -9,6 +9,13 @@ html body {
   background-color: #466BB0; 
 }
 
+.reveal section table td, .reveal section table th {
+    padding: 20px;
+    border: solid grey 1px; 
+}
+
+.reveal section table { border-collapse: collapse; } 
+
 .reveal .slides {
     margin-top: -60px;
 }
