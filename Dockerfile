@@ -15,7 +15,6 @@ RUN sed -i Gruntfile.js -e 's/port: port,/port: port, hostname: "", livereload: 
 RUN sed -i Gruntfile.js -e "s/files: \[ 'index\.html' \],/files: [ 'pres\/**' ],/"
 ADD index.html /revealjs/
 ADD custom.css /revealjs/css/
-ADD container-solutions-logo.png /revealjs/container-solutions-logo.png
 ADD title.js /revealjs/plugin/
 
 EXPOSE 8000

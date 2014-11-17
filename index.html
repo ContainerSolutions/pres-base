@@ -17,12 +17,14 @@
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-		<script>
+		<script type="text/javascript">
 			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
 		</script>
 
         <!-- Live reload -->
-        <script src="//localhost:35729/livereload.js"></script>
+        <script type="text/javascript">
+            document.write('<script src="//' + window.location.hostname + ':35729/livereload.js"><'+'/script>');
+        </script>
 
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
@@ -40,7 +42,7 @@
                 </section>
 			</div>
             <footer>
-                <img src="container-solutions-logo.png" alt="Container Solutions" />
+                <img class="logo" />
                 <p>
                     <span class="author"></span><br />
                     <a class="twitter" href="#"></a>
@@ -85,6 +87,7 @@
                 $('.author').text(config.author);
                 $('.twitter').attr('href','https://twitter.com/' + config.twitter);
                 $('.twitter').text('@' + config.twitter);
+                config.logo && $('.logo').attr('src', config.logo);
             });
 
 		</script>

@@ -29,11 +29,12 @@ If you need to include other files e.g. images, keep them with the presentation 
 
 This project is *heavily* based on [Peter Parente's revealjs](https://github.com/parente/dockerfiles/tree/master/revealjs). This differences are that this version has an updated Dockerfile which uses the NodeJS official image and removes a problematic VOLUME command.
  
-To display presentation author and/or their Twitter account next to the logo in the footer, add config.js in the following format to the presentation volume:
+To display presentation author and/or their Twitter account next to the logo in the footer, add config.js in the following format to the presentation volume. The logo, if present, will be automatically resized to be 50px height.
 
     var config = {
         author: "Container Solutions",
-        twitter: "containersoluti"
+        twitter: "containersoluti",
+        logo: "pres/logo.png"
     };
     
 
