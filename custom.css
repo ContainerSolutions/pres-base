@@ -21,7 +21,6 @@ html body {
     line-height: 1.1em;
 }
 
-
 .reveal section h1 {
     font-size: 3em;
 }
@@ -56,14 +55,17 @@ html body {
     padding-bottom: 10px;
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 100;
 }
 
 .reveal footer img {
     position: relative;
     float: left;
     height: 50px;
-    margin-left: 10px;
+    margin-left: 15px;
+    margin-top: 5px;
+    border: none;
+    box-shadow: none;
 }
 
 .reveal footer p {
@@ -72,7 +74,7 @@ html body {
     position: relative;
     float: left;
     margin-left: 10px;
-    margin-top: 18px;
+    margin-top: 23px;
 }
 
 .reveal footer a {

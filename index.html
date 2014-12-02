@@ -94,6 +94,15 @@
                 $('.twitter').attr('href','https://twitter.com/' + config.twitter);
                 $('.twitter').text('@' + config.twitter);
                 config.logo && $('.logo').attr('src', config.logo);
+
+                if( window.location.search.match( /print-pdf/gi ) ) {
+                    $('footer')
+                        .css('top', '770px')
+                        .css('position', 'absolute')
+                        .css('left', '0px');
+                    $('section[data-markdown]').prepend($('footer'));
+                }
+
             });
 
 		</script>
