@@ -1,4 +1,4 @@
-FROM node
+FROM node:0.10-slim
 
 MAINTAINER Adrian Mouat <adrian@adrianmouat.com>
 
@@ -8,8 +8,6 @@ RUN mkdir -p /revealjs/pres
 WORKDIR /revealjs
 
 RUN npm install -g grunt-cli && npm install
-
-RUN apt-get -y install vim
 
 RUN sed -i Gruntfile.js -e 's/port: port,/port: port, hostname: "", livereload: true,/'
 RUN sed -i Gruntfile.js -e "s/files: \[ 'index\.html' \],/files: [ 'pres\/**' ],/"
