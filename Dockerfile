@@ -9,6 +9,7 @@ WORKDIR /revealjs
 
 RUN npm install -g grunt-cli && npm install
 
+RUN sed -i Gruntfile.js -e "s/files: \[ 'index\.html' \],/files: [ 'pres\/**' ],/"
 ADD index.html /revealjs/
 ADD custom.css /revealjs/css/
 ADD title.js /revealjs/plugin/
