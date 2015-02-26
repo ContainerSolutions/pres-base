@@ -1,9 +1,18 @@
-# Reveal JS
-<br/>
+# Presentation
+
+Create great web presentations
+
+Use markdown or HTML
+
+Edit on the fly with live reload
+
+<a href="http://lab.hakim.se/reveal-js">More info</a>
 
 ---
 
 ## A slide
+
+Press down now
 
 -
 
